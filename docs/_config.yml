@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+
+title: Thesis Report
+description: Research findings on test smell detection using machine learning
+show_downloads: false
+github.is_project_page: true
