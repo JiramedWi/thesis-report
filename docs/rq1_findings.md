@@ -57,18 +57,18 @@ The following combinations consistently appeared in top 5 rankings across multip
 
 <div class="table-wrapper">
 
-| Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Appearance Count | Datasets |
-|------|-----------------|------------|--------|---------------|------------------|----------|
-| 1 | TF | porterstemmer | 1 | ProWSyn | 6/10 | flink_dependencies, flink_issue_in_test_step, flink_test_semantic_smell, hive_issue_in_test_step, hive_test_execution |
-| 2 | TF | porterstemmer | 2 | ProWSyn | 4/10 | flink_dependencies, flink_test_semantic_smell, hive_test_execution, hive_test_semantic_smell |
-| 3 | TF-IDF | porterstemmer | 2 | ProWSyn | 4/10 | flink_dependencies, flink_test_execution, flink_test_semantic_smell, hive_test_semantic_smell |
-| 4 | TF-IDF | textblob | 1 | ProWSyn | 3/10 | flink_dependencies, flink_test_execution, hive_issue_in_test_step |
-| 5 | TF | spacy | 2 | Polynomial Fit | 3/10 | flink_test_execution, hive_code_related, hive_issue_in_test_step |
-| 6 | TF | porterstemmer | 1 | Polynomial Fit | 3/10 | flink_test_semantic_smell, hive_code_related, hive_issue_in_test_step |
-| 7 | TF-IDF | porterstemmer | 2 | Polynomial Fit | 2/10 | flink_code_related, hive_code_related |
-| 8 | TF | spacy | 2 | ProWSyn | 2/10 | flink_code_related, hive_dependencies |
-| 9 | TF-IDF | lemmatizer | 2 | Polynomial Fit | 2/10 | flink_code_related, flink_issue_in_test_step |
-| 10 | TF | textblob | 1 | ProWSyn | 2/10 | flink_issue_in_test_step, flink_test_execution |
+| Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Appearance Count | Avg Win-Loss Rank | Avg Win-Loss Amount | Avg CV F1 | Datasets |
+|------|-----------------|------------|--------|---------------|------------------|-------------------|--------------------|-----------|----------|
+| 1 | TF | porterstemmer | 1 | ProWSyn | 6/10 | 2.50 | +58.67 | 0.7470 | flink_dependencies, flink_issue_in_test_step, flink_test_semantic_smell, hive_issue_in_test_step, hive_test_execution |
+| 2 | TF | porterstemmer | 2 | ProWSyn | 4/10 | 2.50 | +49.50 | 0.7670 | flink_dependencies, flink_test_semantic_smell, hive_test_execution, hive_test_semantic_smell |
+| 3 | TF-IDF | porterstemmer | 2 | ProWSyn | 4/10 | 3.12 | +48.00 | 0.8226 | flink_dependencies, flink_test_execution, flink_test_semantic_smell, hive_test_semantic_smell |
+| 4 | TF-IDF | textblob | 1 | ProWSyn | 3/10 | 2.67 | +44.00 | 0.8878 | flink_dependencies, flink_test_execution, hive_issue_in_test_step |
+| 5 | TF | spacy | 2 | Polynomial Fit | 3/10 | 3.17 | +43.67 | 0.8454 | flink_test_execution, hive_code_related, hive_issue_in_test_step |
+| 6 | TF | porterstemmer | 1 | Polynomial Fit | 3/10 | 4.00 | +37.33 | 0.7403 | flink_test_semantic_smell, hive_code_related, hive_issue_in_test_step |
+| 7 | TF-IDF | porterstemmer | 2 | Polynomial Fit | 2/10 | 1.00 | +43.50 | 0.8037 | flink_code_related, hive_code_related |
+| 8 | TF | spacy | 2 | ProWSyn | 2/10 | 2.25 | +30.50 | 0.8713 | flink_code_related, hive_dependencies |
+| 9 | TF-IDF | lemmatizer | 2 | Polynomial Fit | 2/10 | 4.50 | +52.00 | 0.7119 | flink_code_related, flink_issue_in_test_step |
+| 10 | TF | textblob | 1 | ProWSyn | 2/10 | 2.50 | +71.50 | 0.7858 | flink_issue_in_test_step, flink_test_execution |
 
 </div>
 
@@ -78,18 +78,18 @@ The following combinations consistently appeared in bottom 5 rankings across mul
 
 <div class="table-wrapper">
 
-| Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Appearance Count |
-|------|-----------------|------------|--------|---------------|------------------|
-| 1 | TF-IDF | lemmatizer | 1 | ProWSyn | 4/10 |
-| 2 | TF-IDF | spacy | 1 | ProWSyn | 3/10 |
-| 3 | TF | spacy | 2 | Polynomial Fit | 3/10 |
-| 4 | TF | textblob | 1 | Polynomial Fit | 3/10 |
-| 5 | TF-IDF | lemmatizer | 2 | ProWSyn | 2/10 |
-| 6 | TF-IDF | textblob | 1 | Polynomial Fit | 2/10 |
-| 7 | TF-IDF | spacy | 2 | nan | 2/10 |
-| 8 | TF | spacy | 1 | ProWSyn | 2/10 |
-| 9 | TF | spacy | 2 | ProWSyn | 2/10 |
-| 10 | TF-IDF | spacy | 2 | ProWSyn | 2/10 |
+| Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Appearance Count | Avg Win-Loss Rank | Avg Win-Loss Amount | Avg CV F1 |
+|------|-----------------|------------|--------|---------------|------------------|-------------------|--------------------|-----------|
+| 1 | TF-IDF | lemmatizer | 1 | ProWSyn | 4/10 | 46.75 | -50.75 | 0.7910 |
+| 2 | TF-IDF | spacy | 1 | ProWSyn | 3/10 | 47.67 | -50.67 | 0.7770 |
+| 3 | TF | spacy | 2 | Polynomial Fit | 3/10 | 48.00 | -62.67 | 0.7691 |
+| 4 | TF | textblob | 1 | Polynomial Fit | 3/10 | 45.33 | -43.67 | 0.8543 |
+| 5 | TF-IDF | lemmatizer | 2 | ProWSyn | 2/10 | 47.25 | -43.50 | 0.7894 |
+| 6 | TF-IDF | textblob | 1 | Polynomial Fit | 2/10 | 44.75 | -46.50 | 0.8155 |
+| 7 | TF-IDF | spacy | 2 | nan | 2/10 | 47.25 | -58.00 | 0.5462 |
+| 8 | TF | spacy | 1 | ProWSyn | 2/10 | 46.75 | -68.50 | 0.6479 |
+| 9 | TF | spacy | 2 | ProWSyn | 2/10 | 44.50 | -54.00 | 0.7747 |
+| 10 | TF-IDF | spacy | 2 | ProWSyn | 2/10 | 46.00 | -47.50 | 0.8461 |
 
 </div>
 
@@ -232,6 +232,199 @@ The following combinations consistently appeared in bottom 5 rankings across mul
 | 3 | TF | lemmatizer | 1 | ProWSyn | 3 | 54 | 66 | 110 | 12 |
 | 4 | TF | porterstemmer | 1 | ProWSyn | 4 | 51 | 61 | 117 | 10 |
 | 5 | TF | porterstemmer | 2 | ProWSyn | 5 | 49 | 58 | 121 | 9 |
+
+</div>
+
+## Top 5 Combinations Comparison by Project
+
+This section compares the top 5 performing combinations across all labels within each project.
+
+### FLINK - Top 5 Combinations Across All Labels
+
+<div class="table-wrapper">
+
+| Label | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| code_related | 1 | TF-IDF | porterstemmer | 2 | Polynomial Fit | 1 | 39 | 44 | 139 | 5 |
+|  | 2 | TF-IDF | spacy | 2 | Polynomial Fit | 2 | 30 | 41 | 136 | 11 |
+|  | 3 | TF | spacy | 2 | ProWSyn | 2 | 30 | 45 | 128 | 15 |
+|  | 4 | TF-IDF | lemmatizer | 2 | Polynomial Fit | 4 | 26 | 37 | 140 | 11 |
+|  | 5 | TF-IDF | lemmatizer | 1 | nan | 5 | 25 | 25 | 163 | 0 |
+| | | | | | | | | | | |
+| dependencies | 1 | TF-IDF | lemmatizer | 1 | ProWSyn | 1 | 52 | 57 | 126 | 5 |
+|  | 2 | TF | porterstemmer | 2 | ProWSyn | 2 | 47 | 61 | 113 | 14 |
+|  | 3 | TF-IDF | porterstemmer | 2 | ProWSyn | 3 | 46 | 54 | 126 | 8 |
+|  | 4 | TF | porterstemmer | 1 | ProWSyn | 4 | 41 | 55 | 119 | 14 |
+|  | 5 | TF-IDF | textblob | 1 | ProWSyn | 5 | 39 | 45 | 137 | 6 |
+| | | | | | | | | | | |
+| issue_in_test_step | 1 | TF-IDF | lemmatizer | 2 | ProWSyn | 1 | 115 | 122 | 59 | 7 |
+|  | 2 | TF | porterstemmer | 1 | ProWSyn | 2 | 113 | 117 | 67 | 4 |
+|  | 3 | TF-IDF | textblob | 2 | Polynomial Fit | 3 | 93 | 98 | 85 | 5 |
+|  | 4 | TF | textblob | 1 | ProWSyn | 4 | 84 | 94 | 84 | 10 |
+|  | 5 | TF-IDF | lemmatizer | 2 | Polynomial Fit | 5 | 78 | 78 | 110 | 0 |
+| | | | | | | | | | | |
+| test_execution | 1 | TF | textblob | 1 | ProWSyn | 1 | 59 | 66 | 115 | 7 |
+|  | 2 | TF-IDF | textblob | 1 | ProWSyn | 2 | 47 | 64 | 107 | 17 |
+|  | 3 | TF | spacy | 2 | Polynomial Fit | 4 | 43 | 54 | 123 | 11 |
+|  | 4 | TF-IDF | porterstemmer | 2 | ProWSyn | 4 | 43 | 46 | 139 | 3 |
+|  | 5 | TF | lemmatizer | 2 | Polynomial Fit | 5 | 36 | 52 | 120 | 16 |
+| | | | | | | | | | | |
+| test_semantic_smell | 1 | TF | porterstemmer | 1 | ProWSyn | 1 | 47 | 48 | 139 | 1 |
+|  | 2 | TF | porterstemmer | 2 | ProWSyn | 2 | 36 | 42 | 140 | 6 |
+|  | 3 | TF | porterstemmer | 1 | Polynomial Fit | 4 | 34 | 50 | 122 | 16 |
+|  | 4 | TF | textblob | 2 | ProWSyn | 4 | 34 | 40 | 142 | 6 |
+|  | 5 | TF-IDF | porterstemmer | 2 | ProWSyn | 5 | 32 | 39 | 142 | 7 |
+| | | | | | | | | | | |
+
+</div>
+
+### HIVE - Top 5 Combinations Across All Labels
+
+<div class="table-wrapper">
+
+| Label | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| code_related | 1 | TF-IDF | porterstemmer | 2 | Polynomial Fit | 1 | 48 | 57 | 122 | 9 |
+|  | 2 | TF | spacy | 2 | Polynomial Fit | 2 | 46 | 55 | 124 | 9 |
+|  | 3 | TF | textblob | 1 | Polynomial Fit | 3 | 39 | 51 | 125 | 12 |
+|  | 4 | TF-IDF | lemmatizer | 1 | Polynomial Fit | 4 | 36 | 45 | 134 | 9 |
+|  | 5 | TF | porterstemmer | 1 | Polynomial Fit | 6 | 34 | 45 | 132 | 11 |
+| | | | | | | | | | | |
+| dependencies | 1 | TF | textblob | 2 | nan | 1 | 48 | 48 | 140 | 0 |
+|  | 2 | TF | spacy | 2 | ProWSyn | 2 | 31 | 39 | 141 | 8 |
+|  | 3 | TF | porterstemmer | 2 | nan | 4 | 30 | 35 | 148 | 5 |
+|  | 4 | TF | textblob | 1 | nan | 4 | 30 | 34 | 150 | 4 |
+|  | 5 | TF | lemmatizer | 2 | ProWSyn | 5 | 28 | 35 | 146 | 7 |
+| | | | | | | | | | | |
+| issue_in_test_step | 1 | TF-IDF | textblob | 1 | ProWSyn | 1 | 46 | 54 | 126 | 8 |
+|  | 2 | TF | porterstemmer | 1 | ProWSyn | 2 | 45 | 54 | 125 | 9 |
+|  | 3 | TF | porterstemmer | 1 | Polynomial Fit | 3 | 44 | 51 | 130 | 7 |
+|  | 4 | TF | spacy | 2 | Polynomial Fit | 4 | 42 | 50 | 130 | 8 |
+|  | 5 | TF | textblob | 2 | Polynomial Fit | 5 | 38 | 49 | 128 | 11 |
+| | | | | | | | | | | |
+| test_execution | 1 | TF | porterstemmer | 2 | ProWSyn | 1 | 66 | 74 | 106 | 8 |
+|  | 2 | TF | porterstemmer | 1 | ProWSyn | 2 | 55 | 63 | 117 | 8 |
+|  | 3 | TF | lemmatizer | 2 | ProWSyn | 3 | 47 | 51 | 133 | 4 |
+|  | 4 | TF | lemmatizer | 1 | ProWSyn | 4 | 45 | 56 | 121 | 11 |
+|  | 5 | TF | spacy | 1 | ProWSyn | 4 | 45 | 58 | 117 | 13 |
+| | | | | | | | | | | |
+| test_semantic_smell | 1 | TF-IDF | porterstemmer | 2 | ProWSyn | 1 | 71 | 79 | 101 | 8 |
+|  | 2 | TF-IDF | porterstemmer | 1 | ProWSyn | 2 | 57 | 65 | 115 | 8 |
+|  | 3 | TF | lemmatizer | 1 | ProWSyn | 3 | 54 | 66 | 110 | 12 |
+|  | 4 | TF | porterstemmer | 1 | ProWSyn | 4 | 51 | 61 | 117 | 10 |
+|  | 5 | TF | porterstemmer | 2 | ProWSyn | 5 | 49 | 58 | 121 | 9 |
+| | | | | | | | | | | |
+
+</div>
+
+## Top 5 Combinations Comparison by Label (Cross-Project)
+
+This section compares the top 5 performing combinations for each test smell label across both projects (Flink and Hive).
+
+**Bold rows** indicate combinations that appear in top 5 for BOTH projects.
+
+### Code Related - Flink vs Hive Comparison
+
+<div class="table-wrapper">
+
+| Project | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|---------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| FLINK | 1 | **TF-IDF** | **porterstemmer** | **2** | **Polynomial Fit** | 1 | 39 | 44 | 139 | 5 |
+|  | 2 | TF-IDF | spacy | 2 | Polynomial Fit | 2 | 30 | 41 | 136 | 11 |
+|  | 3 | TF | spacy | 2 | ProWSyn | 2 | 30 | 45 | 128 | 15 |
+|  | 4 | TF-IDF | lemmatizer | 2 | Polynomial Fit | 4 | 26 | 37 | 140 | 11 |
+|  | 5 | TF-IDF | lemmatizer | 1 | nan | 5 | 25 | 25 | 163 | 0 |
+| | | | | | | | | | | |
+| HIVE | 1 | **TF-IDF** | **porterstemmer** | **2** | **Polynomial Fit** | 1 | 48 | 57 | 122 | 9 |
+|  | 2 | TF | spacy | 2 | Polynomial Fit | 2 | 46 | 55 | 124 | 9 |
+|  | 3 | TF | textblob | 1 | Polynomial Fit | 3 | 39 | 51 | 125 | 12 |
+|  | 4 | TF-IDF | lemmatizer | 1 | Polynomial Fit | 4 | 36 | 45 | 134 | 9 |
+|  | 5 | TF | porterstemmer | 1 | Polynomial Fit | 6 | 34 | 45 | 132 | 11 |
+| | | | | | | | | | | |
+
+</div>
+
+### Dependencies - Flink vs Hive Comparison
+
+<div class="table-wrapper">
+
+| Project | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|---------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| FLINK | 1 | TF-IDF | lemmatizer | 1 | ProWSyn | 1 | 52 | 57 | 126 | 5 |
+|  | 2 | TF | porterstemmer | 2 | ProWSyn | 2 | 47 | 61 | 113 | 14 |
+|  | 3 | TF-IDF | porterstemmer | 2 | ProWSyn | 3 | 46 | 54 | 126 | 8 |
+|  | 4 | TF | porterstemmer | 1 | ProWSyn | 4 | 41 | 55 | 119 | 14 |
+|  | 5 | TF-IDF | textblob | 1 | ProWSyn | 5 | 39 | 45 | 137 | 6 |
+| | | | | | | | | | | |
+| HIVE | 1 | TF | textblob | 2 | nan | 1 | 48 | 48 | 140 | 0 |
+|  | 2 | TF | spacy | 2 | ProWSyn | 2 | 31 | 39 | 141 | 8 |
+|  | 3 | TF | porterstemmer | 2 | nan | 4 | 30 | 35 | 148 | 5 |
+|  | 4 | TF | textblob | 1 | nan | 4 | 30 | 34 | 150 | 4 |
+|  | 5 | TF | lemmatizer | 2 | ProWSyn | 5 | 28 | 35 | 146 | 7 |
+| | | | | | | | | | | |
+
+</div>
+
+### Issue In Test Step - Flink vs Hive Comparison
+
+<div class="table-wrapper">
+
+| Project | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|---------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| FLINK | 1 | TF-IDF | lemmatizer | 2 | ProWSyn | 1 | 115 | 122 | 59 | 7 |
+|  | 2 | **TF** | **porterstemmer** | **1** | **ProWSyn** | 2 | 113 | 117 | 67 | 4 |
+|  | 3 | TF-IDF | textblob | 2 | Polynomial Fit | 3 | 93 | 98 | 85 | 5 |
+|  | 4 | TF | textblob | 1 | ProWSyn | 4 | 84 | 94 | 84 | 10 |
+|  | 5 | TF-IDF | lemmatizer | 2 | Polynomial Fit | 5 | 78 | 78 | 110 | 0 |
+| | | | | | | | | | | |
+| HIVE | 1 | TF-IDF | textblob | 1 | ProWSyn | 1 | 46 | 54 | 126 | 8 |
+|  | 2 | **TF** | **porterstemmer** | **1** | **ProWSyn** | 2 | 45 | 54 | 125 | 9 |
+|  | 3 | TF | porterstemmer | 1 | Polynomial Fit | 3 | 44 | 51 | 130 | 7 |
+|  | 4 | TF | spacy | 2 | Polynomial Fit | 4 | 42 | 50 | 130 | 8 |
+|  | 5 | TF | textblob | 2 | Polynomial Fit | 5 | 38 | 49 | 128 | 11 |
+| | | | | | | | | | | |
+
+</div>
+
+### Test Execution - Flink vs Hive Comparison
+
+<div class="table-wrapper">
+
+| Project | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|---------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| FLINK | 1 | TF | textblob | 1 | ProWSyn | 1 | 59 | 66 | 115 | 7 |
+|  | 2 | TF-IDF | textblob | 1 | ProWSyn | 2 | 47 | 64 | 107 | 17 |
+|  | 3 | TF | spacy | 2 | Polynomial Fit | 4 | 43 | 54 | 123 | 11 |
+|  | 4 | TF-IDF | porterstemmer | 2 | ProWSyn | 4 | 43 | 46 | 139 | 3 |
+|  | 5 | TF | lemmatizer | 2 | Polynomial Fit | 5 | 36 | 52 | 120 | 16 |
+| | | | | | | | | | | |
+| HIVE | 1 | TF | porterstemmer | 2 | ProWSyn | 1 | 66 | 74 | 106 | 8 |
+|  | 2 | TF | porterstemmer | 1 | ProWSyn | 2 | 55 | 63 | 117 | 8 |
+|  | 3 | TF | lemmatizer | 2 | ProWSyn | 3 | 47 | 51 | 133 | 4 |
+|  | 4 | TF | lemmatizer | 1 | ProWSyn | 4 | 45 | 56 | 121 | 11 |
+|  | 5 | TF | spacy | 1 | ProWSyn | 4 | 45 | 58 | 117 | 13 |
+| | | | | | | | | | | |
+
+</div>
+
+### Test Semantic Smell - Flink vs Hive Comparison
+
+<div class="table-wrapper">
+
+| Project | Rank | Textual Feature | Stem Lemma | N-gram | Imba Handling | Win-Loss Rank | Total Win-Loss | Total Wins | Total Ties | Total Losses |
+|---------|------|-----------------|------------|--------|---------------|---------------|---------------|------------|-------------|--------------|
+| FLINK | 1 | **TF** | **porterstemmer** | **1** | **ProWSyn** | 1 | 47 | 48 | 139 | 1 |
+|  | 2 | **TF** | **porterstemmer** | **2** | **ProWSyn** | 2 | 36 | 42 | 140 | 6 |
+|  | 3 | TF | porterstemmer | 1 | Polynomial Fit | 4 | 34 | 50 | 122 | 16 |
+|  | 4 | TF | textblob | 2 | ProWSyn | 4 | 34 | 40 | 142 | 6 |
+|  | 5 | **TF-IDF** | **porterstemmer** | **2** | **ProWSyn** | 5 | 32 | 39 | 142 | 7 |
+| | | | | | | | | | | |
+| HIVE | 1 | **TF-IDF** | **porterstemmer** | **2** | **ProWSyn** | 1 | 71 | 79 | 101 | 8 |
+|  | 2 | TF-IDF | porterstemmer | 1 | ProWSyn | 2 | 57 | 65 | 115 | 8 |
+|  | 3 | TF | lemmatizer | 1 | ProWSyn | 3 | 54 | 66 | 110 | 12 |
+|  | 4 | **TF** | **porterstemmer** | **1** | **ProWSyn** | 4 | 51 | 61 | 117 | 10 |
+|  | 5 | **TF** | **porterstemmer** | **2** | **ProWSyn** | 5 | 49 | 58 | 121 | 9 |
+| | | | | | | | | | | |
 
 </div>
 
