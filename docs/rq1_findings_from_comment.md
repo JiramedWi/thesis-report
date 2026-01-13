@@ -93,8 +93,8 @@ For each of the 48 unique combinations:
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Loss % | Win-to-Loss Ratio | Global Avg Rank |
-|------|---------------------|--------|-------------------|-----------------|
+| Rank | Feature Combination | Total W-T-L | Loss % | Win-to-Loss Ratio | Global Avg Rank |
+|------|---------------------|-------------|--------|-------------------|-----------------|
 
 </div>
 
@@ -102,13 +102,13 @@ For each of the 48 unique combinations:
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Loss % | Win-to-Loss Ratio | Global Avg Rank |
-|------|---------------------|--------|-------------------|-----------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 7.18% | 3.78 | 10.00 |
-| 2 | TF + porterstemmer + 2 + None | 6.7% | 1.96 | 18.05 |
-| 3 | TF-IDF + spacy + 1 + None | 8.46% | 1.11 | 21.85 |
-| 4 | TF + spacy + 1 + None | 8.46% | 0.85 | 25.65 |
-| 5 | TF-IDF + porterstemmer + 2 + None | 9.73% | 1.01 | 26.10 |
+| Rank | Feature Combination | Total W-T-L | Loss % | Win-to-Loss Ratio | Global Avg Rank |
+|------|---------------------|-------------|--------|-------------------|-----------------|
+| 1 | TF + porterstemmer + 1 + ProWSyn | 510 - 1235 - 135 | 7.18% | 3.78 | 10.00 |
+| 2 | TF + porterstemmer + 2 + None | 247 - 1507 - 126 | 6.7% | 1.96 | 18.05 |
+| 3 | TF-IDF + spacy + 1 + None | 177 - 1544 - 159 | 8.46% | 1.11 | 21.85 |
+| 4 | TF + spacy + 1 + None | 135 - 1586 - 159 | 8.46% | 0.85 | 25.65 |
+| 5 | TF-IDF + porterstemmer + 2 + None | 184 - 1513 - 183 | 9.73% | 1.01 | 26.10 |
 
 </div>
 
