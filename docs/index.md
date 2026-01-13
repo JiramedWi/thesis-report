@@ -7,10 +7,12 @@ Welcome to my thesis research report on **test smell detection using machine lea
 This research analyzes test smell detection in open-source projects using various machine learning combinations across different feature extraction methods and text preprocessing techniques.
 
 ### Projects Analyzed
+
 - **Apache Flink**
 - **Apache Hive**
 
 ### Classification Labels
+
 - `code_related` - Whether code is mentioned in the discussion
 - `dependencies` - Whether dependencies are discussed
 - `issue_in_test_step` - Whether test steps are involved
@@ -24,10 +26,15 @@ This research analyzes test smell detection in open-source projects using variou
 Analysis of top-performing feature combinations for test smell detection across projects and classification tasks.
 
 **Key Findings:**
+
 - Best Performing: **TF + porterstemmer + unigrams + ProWSyn**
 - Worst Performing: **TF-IDF + lemmatizer + unigrams + ProWSyn**
 - 48 unique combinations analyzed across 10 datasets
 
+### [RQ1: Global Performance & Robustness Analysis (Updated)](rq1_findings_from_comment)
+
+Updated analysis with global robustness evaluation across projects and classification tasks, including risk-reward analysis and performance metrics.
+
 ---
 
-*Last updated: December 2025*
+_Last updated: 12 Jan 2026_
