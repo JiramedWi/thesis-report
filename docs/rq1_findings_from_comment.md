@@ -14,6 +14,14 @@
 This analysis transforms local project-level results into a global robustness analysis
 across two open-source projects (Apache Flink and Apache Hive) and five classification tasks.
 
+### Detailed Analysis by Classification Label
+
+- **[Code Related Analysis](analysis_each_y/analysis_rq1_code_related.md)** - Analysis of code-related feature combinations
+- **[Dependencies Analysis](analysis_each_y/analysis_rq1_dependencies.md)** - Analysis of dependency-related feature combinations
+- **[Issue in Test Step Analysis](analysis_each_y/analysis_rq1_issue_in_test_step.md)** - Analysis of test step involvement feature combinations
+- **[Test Execution Analysis](analysis_each_y/analysis_rq1_test_execution.md)** - Analysis of test execution feature combinations
+- **[Test Semantic Smell Analysis](analysis_each_y/analysis_rq1_test_semantic_smell.md)** - Analysis of semantic test smell feature combinations
+
 ## Data Sources
 
 - **Projects**: Apache Flink and Apache Hive
