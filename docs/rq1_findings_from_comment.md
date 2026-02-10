@@ -50,16 +50,17 @@ across two open-source projects (Apache Flink and Apache Hive) and five classifi
 ### Global Metrics Calculated
 
 For each of the 48 unique combinations:
-1. **Global Avg Rank**: Mean of `rank_total_win_loss` across all datasets (lower = better)
+1. **WTL Avg Rank**: Mean of `rank_total_win_loss` across all datasets (lower = better)
 2. **Total Wins**: Sum of `total_wins` across all datasets
 3. **Total Ties**: Sum of `total_ties` across all datasets
 4. **Total Losses**: Sum of `total_losses` across all datasets
 5. **Loss Percentage**: (Total Losses / Total Wins + Total Ties + Total Losses) × 100
 6. **Win-to-Loss Ratio**: Total Wins / Total Losses (higher = better)
-7. **"General Good" Scores**: Count of times the combination achieved rank within threshold locally:
-   - **General Good (Top 3)**: Count of times ranked ≤ 3
-   - **General Good (Top 5)**: Count of times ranked ≤ 5
-   - **General Good (Top 10)**: Count of times ranked ≤ 10
+7. **"Appear in Top X**: Count of times the combination achieved rank within threshold locally:
+   - **Appear in Top 3**: Count of times ranked ≤ 3
+   - **Appear in Top 5**: Count of times ranked ≤ 5
+   - **Appear in Top 10**: Count of times ranked ≤ 10
+8. **Appear in top 10 in each test smell categories**: Count of classification labels (out of 5) where the combination achieved a top 10 ranking
 
 ## Findings
 
@@ -75,18 +76,18 @@ For each of the 48 unique combinations:
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Total W-T-L | Loss % | General Good (Top 3) | General Good (Top 5) | General Good (Top 10) | Win-to-Loss Ratio | Categories in Top 10 | code_related | dependencies | issue_in_test_step | test_execution | test_semantic_smell |
-|------|------|------|------|------|------|------|------|------|------|------|------|------|------|------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 510 - 1235 - 135 | 7.18 | 4 | 5 | 7 | 3.78 | 5/5 | **1** | **2** | **1** | **2** | **1** |
-| 2 | TF + textblob + 1 + ProWSyn | 14.60 | 432 - 1240 - 208 | 11.06 | 1 | 3 | 5 | 2.08 | 3/5 | **1** | **1** | 12 | **2** | 15 |
-| 3 | TF-IDF + textblob + 1 + ProWSyn | 16.95 | 407 - 1232 - 241 | 12.82 | 2 | 3 | 5 | 1.69 | 3/5 | **2** | **1** | 11 | **2** | 18 |
-| 4 | TF-IDF + porterstemmer + 2 + ProWSyn | 17.45 | 389 - 1254 - 237 | 12.61 | 2 | 3 | 5 | 1.64 | 3/5 | **2** | **2** | 11 | **2** | 17 |
-| 5 | TF + porterstemmer + 2 + ProWSyn | 17.55 | 437 - 1216 - 227 | 12.07 | 3 | 4 | 5 | 1.93 | 5/5 | **1** | **2** | **3** | **1** | **2** |
-| 6 | TF + porterstemmer + 2 + None | 18.05 | 247 - 1507 - 126 | 6.70 | 0 | 2 | 3 | 1.96 | 2/5 | **5** | 17 | 17 | **7** | 13 |
-| 7 | TF-IDF + porterstemmer + 1 + Polynomial Fit | 19.55 | 383 - 1235 - 262 | 13.94 | 0 | 2 | 3 | 1.46 | 3/5 | **2** | **3** | 17 | **2** | 20 |
-| 8 | TF-IDF + lemmatizer + 1 + Polynomial Fit | 19.85 | 340 - 1257 - 283 | 15.05 | 0 | 2 | 3 | 1.20 | 3/5 | **3** | **4** | 18 | **2** | 21 |
-| 9 | TF-IDF + porterstemmer + 2 + Polynomial Fit | 19.90 | 358 - 1280 - 242 | 12.87 | 2 | 2 | 4 | 1.48 | 3/5 | **2** | **2** | 14 | **2** | 19 |
-| 10 | TF-IDF + textblob + 2 + ProWSyn | 20.70 | 341 - 1268 - 271 | 14.41 | 0 | 2 | 3 | 1.26 | 3/5 | **2** | **2** | 13 | **2** | 20 |
+| Rank | Feature Combination | WTL Avg Rank | Total W-T-L | Loss % | Appear in Top 3 | Appear in Top 5 | Appear in Top 10 | Win-to-Loss Ratio | Categories in Top 10 |
+|------|------|------|------|------|------|------|------|------|------|
+| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 510 - 1235 - 135 | 7.18 | 4/10 | 5/10 | 7/10 | 3.78 | 5/5 |
+| 2 | TF + textblob + 1 + ProWSyn | 14.60 | 432 - 1240 - 208 | 11.06 | 1/10 | 3/10 | 5/10 | 2.08 | 3/5 |
+| 3 | TF-IDF + textblob + 1 + ProWSyn | 16.95 | 407 - 1232 - 241 | 12.82 | 2/10 | 3/10 | 5/10 | 1.69 | 3/5 |
+| 4 | TF-IDF + porterstemmer + 2 + ProWSyn | 17.45 | 389 - 1254 - 237 | 12.61 | 2/10 | 3/10 | 5/10 | 1.64 | 3/5 |
+| 5 | TF + porterstemmer + 2 + ProWSyn | 17.55 | 437 - 1216 - 227 | 12.07 | 3/10 | 4/10 | 5/10 | 1.93 | 5/5 |
+| 6 | TF + porterstemmer + 2 + None | 18.05 | 247 - 1507 - 126 | 6.70 | 0/10 | 2/10 | 3/10 | 1.96 | 2/5 |
+| 7 | TF-IDF + porterstemmer + 1 + Polynomial Fit | 19.55 | 383 - 1235 - 262 | 13.94 | 0/10 | 2/10 | 3/10 | 1.46 | 3/5 |
+| 8 | TF-IDF + lemmatizer + 1 + Polynomial Fit | 19.85 | 340 - 1257 - 283 | 15.05 | 0/10 | 2/10 | 3/10 | 1.20 | 3/5 |
+| 9 | TF-IDF + porterstemmer + 2 + Polynomial Fit | 19.90 | 358 - 1280 - 242 | 12.87 | 2/10 | 2/10 | 4/10 | 1.48 | 3/5 |
+| 10 | TF-IDF + textblob + 2 + ProWSyn | 20.70 | 341 - 1268 - 271 | 14.41 | 0/10 | 2/10 | 3/10 | 1.26 | 3/5 |
 
 </div>
 
