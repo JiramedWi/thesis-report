@@ -50,6 +50,7 @@ across two open-source projects (Apache Flink and Apache Hive) and five classifi
 ### Global Metrics Calculated
 
 For each of the 48 unique combinations:
+
 1. **WTL Avg Rank**: Mean of `rank_total_win_loss` across all datasets (lower = better)
 2. **Total Wins**: Sum of `total_wins` across all datasets
 3. **Total Ties**: Sum of `total_ties` across all datasets
@@ -64,10 +65,10 @@ For each of the 48 unique combinations:
 
 ## Findings
 
-
 ### Table 1: The Master Top 10 (Global Performance)
 
 **Test Smell Category Descriptions**:
+
 - **code_related**: Whether code is mentioned in the discussion
 - **dependencies**: Whether dependencies are discussed
 - **issue_in_test_step**: Whether test steps are involved
@@ -76,18 +77,18 @@ For each of the 48 unique combinations:
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | WTL Avg Rank | Total W-T-L | Loss % | Appear in Top 3 | Appear in Top 5 | Appear in Top 10 | Win-to-Loss Ratio | Categories in Top 10 |
-|------|------|------|------|------|------|------|------|------|------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 510 - 1235 - 135 | 7.18 | 4/10 | 5/10 | 7/10 | 3.78 | 5/5 |
-| 2 | TF + textblob + 1 + ProWSyn | 14.60 | 432 - 1240 - 208 | 11.06 | 1/10 | 3/10 | 5/10 | 2.08 | 3/5 |
-| 3 | TF-IDF + textblob + 1 + ProWSyn | 16.95 | 407 - 1232 - 241 | 12.82 | 2/10 | 3/10 | 5/10 | 1.69 | 3/5 |
-| 4 | TF-IDF + porterstemmer + 2 + ProWSyn | 17.45 | 389 - 1254 - 237 | 12.61 | 2/10 | 3/10 | 5/10 | 1.64 | 3/5 |
-| 5 | TF + porterstemmer + 2 + ProWSyn | 17.55 | 437 - 1216 - 227 | 12.07 | 3/10 | 4/10 | 5/10 | 1.93 | 5/5 |
-| 6 | TF + porterstemmer + 2 + None | 18.05 | 247 - 1507 - 126 | 6.70 | 0/10 | 2/10 | 3/10 | 1.96 | 2/5 |
-| 7 | TF-IDF + porterstemmer + 1 + Polynomial Fit | 19.55 | 383 - 1235 - 262 | 13.94 | 0/10 | 2/10 | 3/10 | 1.46 | 3/5 |
-| 8 | TF-IDF + lemmatizer + 1 + Polynomial Fit | 19.85 | 340 - 1257 - 283 | 15.05 | 0/10 | 2/10 | 3/10 | 1.20 | 3/5 |
-| 9 | TF-IDF + porterstemmer + 2 + Polynomial Fit | 19.90 | 358 - 1280 - 242 | 12.87 | 2/10 | 2/10 | 4/10 | 1.48 | 3/5 |
-| 10 | TF-IDF + textblob + 2 + ProWSyn | 20.70 | 341 - 1268 - 271 | 14.41 | 0/10 | 2/10 | 3/10 | 1.26 | 3/5 |
+| Rank | Feature Combination                         | WTL Avg Rank | Total W-T-L      | Loss % | Appear in Top 3 | Appear in Top 5 | Appear in Top 10 | Win-to-Loss Ratio | Appear in categories in Top 10 |
+| ---- | ------------------------------------------- | ------------ | ---------------- | ------ | --------------- | --------------- | ---------------- | ----------------- | ------------------------------ |
+| 1    | TF + porterstemmer + 1 + ProWSyn            | 10.00        | 510 - 1235 - 135 | 7.18   | 4/10            | 5/10            | 7/10             | 3.78              | 5/5                            |
+| 2    | TF + textblob + 1 + ProWSyn                 | 14.60        | 432 - 1240 - 208 | 11.06  | 1/10            | 3/10            | 5/10             | 2.08              | 3/5                            |
+| 3    | TF-IDF + textblob + 1 + ProWSyn             | 16.95        | 407 - 1232 - 241 | 12.82  | 2/10            | 3/10            | 5/10             | 1.69              | 3/5                            |
+| 4    | TF-IDF + porterstemmer + 2 + ProWSyn        | 17.45        | 389 - 1254 - 237 | 12.61  | 2/10            | 3/10            | 5/10             | 1.64              | 3/5                            |
+| 5    | TF + porterstemmer + 2 + ProWSyn            | 17.55        | 437 - 1216 - 227 | 12.07  | 3/10            | 4/10            | 5/10             | 1.93              | 5/5                            |
+| 6    | TF + porterstemmer + 2 + None               | 18.05        | 247 - 1507 - 126 | 6.70   | 0/10            | 2/10            | 3/10             | 1.96              | 2/5                            |
+| 7    | TF-IDF + porterstemmer + 1 + Polynomial Fit | 19.55        | 383 - 1235 - 262 | 13.94  | 0/10            | 2/10            | 3/10             | 1.46              | 3/5                            |
+| 8    | TF-IDF + lemmatizer + 1 + Polynomial Fit    | 19.85        | 340 - 1257 - 283 | 15.05  | 0/10            | 2/10            | 3/10             | 1.20              | 3/5                            |
+| 9    | TF-IDF + porterstemmer + 2 + Polynomial Fit | 19.90        | 358 - 1280 - 242 | 12.87  | 2/10            | 2/10            | 4/10             | 1.48              | 3/5                            |
+| 10   | TF-IDF + textblob + 2 + ProWSyn             | 20.70        | 341 - 1268 - 271 | 14.41  | 0/10            | 2/10            | 3/10             | 1.26              | 3/5                            |
 
 </div>
 
@@ -100,7 +101,7 @@ For each of the 48 unique combinations:
 <div class="table-wrapper">
 
 | Rank | Feature Combination | Total W-T-L | Loss % | Win-to-Loss Ratio | Global Avg Rank |
-|------|---------------------|-------------|--------|-------------------|-----------------|
+| ---- | ------------------- | ----------- | ------ | ----------------- | --------------- |
 
 </div>
 
@@ -108,21 +109,21 @@ For each of the 48 unique combinations:
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Total W-T-L | Loss % | Win-to-Loss Ratio | Global Avg Rank |
-|------|---------------------|-------------|--------|-------------------|-----------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 510 - 1235 - 135 | 7.18% | 3.78 | 10.00 |
-| 2 | TF + porterstemmer + 2 + None | 247 - 1507 - 126 | 6.7% | 1.96 | 18.05 |
-| 3 | TF-IDF + spacy + 1 + None | 177 - 1544 - 159 | 8.46% | 1.11 | 21.85 |
-| 4 | TF + spacy + 1 + None | 135 - 1586 - 159 | 8.46% | 0.85 | 25.65 |
-| 5 | TF-IDF + porterstemmer + 2 + None | 184 - 1513 - 183 | 9.73% | 1.01 | 26.10 |
+| Rank | Feature Combination               | Total W-T-L      | Loss % | Win-to-Loss Ratio | Global Avg Rank |
+| ---- | --------------------------------- | ---------------- | ------ | ----------------- | --------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn  | 510 - 1235 - 135 | 7.18%  | 3.78              | 10.00           |
+| 2    | TF + porterstemmer + 2 + None     | 247 - 1507 - 126 | 6.7%   | 1.96              | 18.05           |
+| 3    | TF-IDF + spacy + 1 + None         | 177 - 1544 - 159 | 8.46%  | 1.11              | 21.85           |
+| 4    | TF + spacy + 1 + None             | 135 - 1586 - 159 | 8.46%  | 0.85              | 25.65           |
+| 5    | TF-IDF + porterstemmer + 2 + None | 184 - 1513 - 183 | 9.73%  | 1.01              | 26.10           |
 
 </div>
 
 **Risk vs. Reward Insight:**
+
 - No combinations found in Safe Zone (<5% Loss).
 - Group B (Tolerable Zone 5-10% Loss) has an average Win-to-Loss Ratio of 1.74 and average Global Avg Rank of 20.33.
 - These are the lowest-risk combinations available in the dataset.
-
 
 ## Table 3: The "Golden" Candidates - Multi-Level Analysis
 
@@ -131,131 +132,130 @@ This section presents multiple "Golden" candidate tables using different combina
 ### Table 3A: Strict Golden (Highest Standards)
 
 **Criteria**: All of the following must be met:
+
 1. In the Top 10 for Global Avg Rank
 2. Loss Percentage < 5%
 3. General Good (Top 5) ≥ 5 OR General Good (Top 10) ≥ 7
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Loss % | General Good (Top 5) | General Good (Top 10) | Win-to-Loss Ratio |
-|------|---------------------|-----------------|--------|---------------------|----------------------|-------------------|
-| - | *No combinations meet all strict criteria* | - | - | - | - | - |
+| Rank | Feature Combination                        | Global Avg Rank | Loss % | General Good (Top 5) | General Good (Top 10) | Win-to-Loss Ratio |
+| ---- | ------------------------------------------ | --------------- | ------ | -------------------- | --------------------- | ----------------- |
+| -    | _No combinations meet all strict criteria_ | -               | -      | -                    | -                     | -                 |
 
 </div>
 
 **Note**: No combinations achieve the strictest loss standard (<5%). The lowest loss rate in the dataset is 6.70% (TF + porterstemmer + 2 + None). The <5% loss threshold is the limiting factor for Golden status.
 
-
 ### Table 3B: Moderate Golden - Top 3 Focus
 
 **Criteria**: All of the following must be met:
+
 1. In the Top 10 for Global Avg Rank
 2. Loss Percentage < 10%
 3. General Good (Top 3) ≥ 3 (appeared in top 3 in at least 30% of datasets)
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Loss % | General Good (Top 3) | Win-to-Loss Ratio |
-|------|---------------------|-----------------|--------|---------------------|-------------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 7.18% | 4 | 3.78 |
-| 2 | TF + porterstemmer + 2 + ProWSyn | 17.55 | 12.07% | 3 | 1.93 |
+| Rank | Feature Combination              | Global Avg Rank | Loss % | General Good (Top 3) | Win-to-Loss Ratio |
+| ---- | -------------------------------- | --------------- | ------ | -------------------- | ----------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn | 10.00           | 7.18%  | 4                    | 3.78              |
+| 2    | TF + porterstemmer + 2 + ProWSyn | 17.55           | 12.07% | 3                    | 1.93              |
 
 </div>
 
 **Insight**: Only 2 combinations meet the criteria when requiring Top 3 consistency with <10% loss. Both use ProWSyn imbalance handling.
 
-
 ### Table 3C: Moderate Golden - Top 5 Focus
 
 **Criteria**: All of the following must be met:
+
 1. In the Top 10 for Global Avg Rank
 2. Loss Percentage < 10%
 3. General Good (Top 5) ≥ 5 (appeared in top 5 in at least half the datasets)
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Loss % | General Good (Top 5) | Win-to-Loss Ratio |
-|------|---------------------|-----------------|--------|---------------------|-------------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 7.18% | 5 | 3.78 |
-| 2 | TF + porterstemmer + 2 + ProWSyn | 17.55 | 12.07% | 4 | 1.93 |
+| Rank | Feature Combination              | Global Avg Rank | Loss % | General Good (Top 5) | Win-to-Loss Ratio |
+| ---- | -------------------------------- | --------------- | ------ | -------------------- | ----------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn | 10.00           | 7.18%  | 5                    | 3.78              |
+| 2    | TF + porterstemmer + 2 + ProWSyn | 17.55           | 12.07% | 4                    | 1.93              |
 
 </div>
 
 **Insight**: Similar to Top 3 focus, but with slightly more relaxed criteria. Still limited to ProWSyn-based combinations.
 
-
 ### Table 3D: Balanced Golden - Top 5 with Tolerable Loss
 
 **Criteria**: All of the following must be met:
+
 1. In the Top 10 for Global Avg Rank
 2. Loss Percentage < 15%
 3. General Good (Top 5) ≥ 5 (appeared in top 5 in at least half the datasets)
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Loss % | General Good (Top 5) | Win-to-Loss Ratio |
-|------|---------------------|-----------------|--------|---------------------|-------------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 7.18% | 5 | 3.78 |
-| 2 | TF + textblob + 1 + ProWSyn | 14.60 | 11.06% | 3 | 2.08 |
-| 3 | TF-IDF + textblob + 1 + ProWSyn | 16.95 | 12.82% | 3 | 1.69 |
-| 4 | TF-IDF + porterstemmer + 2 + ProWSyn | 17.45 | 12.61% | 3 | 1.69 |
-| 5 | TF + porterstemmer + 2 + ProWSyn | 17.55 | 12.07% | 4 | 1.93 |
+| Rank | Feature Combination                  | Global Avg Rank | Loss % | General Good (Top 5) | Win-to-Loss Ratio |
+| ---- | ------------------------------------ | --------------- | ------ | -------------------- | ----------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn     | 10.00           | 7.18%  | 5                    | 3.78              |
+| 2    | TF + textblob + 1 + ProWSyn          | 14.60           | 11.06% | 3                    | 2.08              |
+| 3    | TF-IDF + textblob + 1 + ProWSyn      | 16.95           | 12.82% | 3                    | 1.69              |
+| 4    | TF-IDF + porterstemmer + 2 + ProWSyn | 17.45           | 12.61% | 3                    | 1.69              |
+| 5    | TF + porterstemmer + 2 + ProWSyn     | 17.55           | 12.07% | 4                    | 1.93              |
 
 </div>
 
 **Insight**: Expanding loss tolerance to 15% reveals 5 combinations, all using ProWSyn imbalance handling. TF + porterstemmer configurations dominate.
 
-
 ### Table 3E: Inclusive Golden - Top 10 Focus
 
 **Criteria**: All of the following must be met:
+
 1. In the Top 10 for Global Avg Rank
 2. Loss Percentage < 15%
 3. General Good (Top 10) ≥ 7 (appeared in top 10 in at least 70% of datasets)
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Loss % | General Good (Top 10) | Win-to-Loss Ratio |
-|------|---------------------|-----------------|--------|----------------------|-------------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 7.18% | 7 | 3.78 |
+| Rank | Feature Combination              | Global Avg Rank | Loss % | General Good (Top 10) | Win-to-Loss Ratio |
+| ---- | -------------------------------- | --------------- | ------ | --------------------- | ----------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn | 10.00           | 7.18%  | 7                     | 3.78              |
 
 </div>
 
 **Insight**: Only one combination achieves top 10 ranking in 70% of datasets with <15% loss, demonstrating exceptional consistency.
 
-
 ### Table 3F: Low-Risk Candidates (Loss-Focused)
 
 **Criteria**: All of the following must be met:
+
 1. In the Top 15 for Global Avg Rank
 2. Loss Percentage < 10%
 3. General Good (Top 10) ≥ 5
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Global Avg Rank | Loss % | General Good (Top 10) | Win-to-Loss Ratio |
-|------|---------------------|-----------------|--------|----------------------|-------------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 10.00 | 7.18% | 7 | 3.78 |
-| 2 | TF + porterstemmer + 2 + None | 18.05 | 6.70% | 3 | 1.96 |
+| Rank | Feature Combination              | Global Avg Rank | Loss % | General Good (Top 10) | Win-to-Loss Ratio |
+| ---- | -------------------------------- | --------------- | ------ | --------------------- | ----------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn | 10.00           | 7.18%  | 7                     | 3.78              |
+| 2    | TF + porterstemmer + 2 + None    | 18.05           | 6.70%  | 3                     | 1.96              |
 
 </div>
 
 **Insight**: Only two combinations maintain <10% loss rate with reasonable consistency. TF + porterstemmer + 2 + None has the lowest loss rate (6.70%) but lower top-10 consistency (3/10).
 
-
 ### Summary of Golden Candidate Analysis
 
-| Table Type | Loss Threshold | Consistency Threshold | Combinations Found | Best Performer |
-|------------|----------------|----------------------|-------------------|----------------|
-| 3A: Strict | <5% | Top 5 ≥ 5 OR Top 10 ≥ 7 | 0 | N/A (loss threshold is limiting factor) |
-| 3B: Top 3 Focus | <10% | Top 3 ≥ 3 | 2 | TF + porterstemmer + 1 + ProWSyn |
-| 3C: Top 5 Focus | <10% | Top 5 ≥ 5 | 2 | TF + porterstemmer + 1 + ProWSyn |
-| 3D: Balanced | <15% | Top 5 ≥ 5 | 5 | TF + porterstemmer + 1 + ProWSyn |
-| 3E: Top 10 Focus | <15% | Top 10 ≥ 7 | 1 | TF + porterstemmer + 1 + ProWSyn |
-| 3F: Low-Risk | <10% | Top 10 ≥ 5 | 2 | TF + porterstemmer + 1 + ProWSyn |
+| Table Type       | Loss Threshold | Consistency Threshold   | Combinations Found | Best Performer                          |
+| ---------------- | -------------- | ----------------------- | ------------------ | --------------------------------------- |
+| 3A: Strict       | <5%            | Top 5 ≥ 5 OR Top 10 ≥ 7 | 0                  | N/A (loss threshold is limiting factor) |
+| 3B: Top 3 Focus  | <10%           | Top 3 ≥ 3               | 2                  | TF + porterstemmer + 1 + ProWSyn        |
+| 3C: Top 5 Focus  | <10%           | Top 5 ≥ 5               | 2                  | TF + porterstemmer + 1 + ProWSyn        |
+| 3D: Balanced     | <15%           | Top 5 ≥ 5               | 5                  | TF + porterstemmer + 1 + ProWSyn        |
+| 3E: Top 10 Focus | <15%           | Top 10 ≥ 7              | 1                  | TF + porterstemmer + 1 + ProWSyn        |
+| 3F: Low-Risk     | <10%           | Top 10 ≥ 5              | 2                  | TF + porterstemmer + 1 + ProWSyn        |
 
 **Key Takeaway**: Across all reasonable threshold combinations, **TF + porterstemmer + 1 + ProWSyn** consistently emerges as the top choice, balancing low loss rate (7.18%) with high consistency across Top 3 (40%), Top 5 (50%), and Top 10 (70%). The <5% loss threshold appears to be the limiting factor for achieving "Strict Golden" status, suggesting that accepting 5-10% loss is necessary for practical feature selection.
-
 
 ## Table 4: General Good Score Comparison (Top 3, 5, 10)
 
@@ -263,18 +263,18 @@ This table compares how many times each top-performing combination appears in di
 
 <div class="table-wrapper">
 
-| Rank | Feature Combination | Top 3 Count | Top 5 Count | Top 10 Count | Top 3 % | Top 5 % | Top 10 % | Consistency Score* |
-|------|---------------------|-------------|-------------|--------------|---------|---------|----------|-------------------|
-| 1 | TF + porterstemmer + 1 + ProWSyn | 4 | 5 | 7 | 40% | 50% | 70% | **1.60** |
-| 2 | TF + textblob + 1 + ProWSyn | 1 | 3 | 5 | 10% | 30% | 50% | 0.90 |
-| 3 | TF-IDF + textblob + 1 + ProWSyn | 2 | 3 | 5 | 20% | 30% | 50% | 1.00 |
-| 4 | TF-IDF + porterstemmer + 2 + ProWSyn | 2 | 3 | 5 | 20% | 30% | 50% | 1.00 |
-| 5 | TF + porterstemmer + 2 + ProWSyn | 3 | 4 | 5 | 30% | 40% | 50% | 1.20 |
-| 6 | TF + porterstemmer + 2 + None | 0 | 2 | 3 | 0% | 20% | 30% | 0.50 |
-| 7 | TF-IDF + porterstemmer + 1 + Polynomial Fit | 0 | 2 | 3 | 0% | 20% | 30% | 0.50 |
-| 8 | TF-IDF + lemmatizer + 1 + Polynomial Fit | 0 | 2 | 3 | 0% | 20% | 30% | 0.50 |
-| 9 | TF-IDF + porterstemmer + 2 + Polynomial Fit | 2 | 2 | 4 | 20% | 20% | 40% | 0.80 |
-| 10 | TF-IDF + textblob + 2 + ProWSyn | 0 | 2 | 3 | 0% | 20% | 30% | 0.50 |
+| Rank | Feature Combination                         | Top 3 Count | Top 5 Count | Top 10 Count | Top 3 % | Top 5 % | Top 10 % | Consistency Score\* |
+| ---- | ------------------------------------------- | ----------- | ----------- | ------------ | ------- | ------- | -------- | ------------------- |
+| 1    | TF + porterstemmer + 1 + ProWSyn            | 4           | 5           | 7            | 40%     | 50%     | 70%      | **1.60**            |
+| 2    | TF + textblob + 1 + ProWSyn                 | 1           | 3           | 5            | 10%     | 30%     | 50%      | 0.90                |
+| 3    | TF-IDF + textblob + 1 + ProWSyn             | 2           | 3           | 5            | 20%     | 30%     | 50%      | 1.00                |
+| 4    | TF-IDF + porterstemmer + 2 + ProWSyn        | 2           | 3           | 5            | 20%     | 30%     | 50%      | 1.00                |
+| 5    | TF + porterstemmer + 2 + ProWSyn            | 3           | 4           | 5            | 30%     | 40%     | 50%      | 1.20                |
+| 6    | TF + porterstemmer + 2 + None               | 0           | 2           | 3            | 0%      | 20%     | 30%      | 0.50                |
+| 7    | TF-IDF + porterstemmer + 1 + Polynomial Fit | 0           | 2           | 3            | 0%      | 20%     | 30%      | 0.50                |
+| 8    | TF-IDF + lemmatizer + 1 + Polynomial Fit    | 0           | 2           | 3            | 0%      | 20%     | 30%      | 0.50                |
+| 9    | TF-IDF + porterstemmer + 2 + Polynomial Fit | 2           | 2           | 4            | 20%     | 20%     | 40%      | 0.80                |
+| 10   | TF-IDF + textblob + 2 + ProWSyn             | 0           | 2           | 3            | 0%      | 20%     | 30%      | 0.50                |
 
 </div>
 
@@ -301,7 +301,6 @@ This table compares how many times each top-performing combination appears in di
    - **ProWSyn** combinations dominate the top 5 positions
    - **porterstemmer** appears in 4 of top 5 most consistent combinations
    - **None** (no imbalance handling) shows lower consistency despite low loss rates
-
 
 ## Summary & Recommendations
 
@@ -387,4 +386,4 @@ Based on the expanded General Good score analysis (Top 3, 5, 10) and multi-level
 
 ---
 
-*Report generated by analyze_rq1.py following req1_plan_gem.md protocol*
+_Report generated by analyze_rq1.py following req1_plan_gem.md protocol_
